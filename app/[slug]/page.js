@@ -8,6 +8,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 import { remarkMdxEvalCodeBlock } from "./mdx.js";
 import overnight from "overnight/themes/Overnight-Slumber.json";
 import "./markdown.css";
+import Comments from "../Comments";
 
 overnight.colors["editor.background"] = "var(--code-bg)";
 
@@ -74,22 +75,23 @@ export default async function PostPage({ params }) {
           }}
         />
         <hr />
-        <p>
+        <Comments/>
+        {/*<p>
           <Link href={discussUrl}>Discuss on 𝕏</Link>
           &nbsp;&nbsp;&middot;&nbsp;&nbsp;
           <Link href={editUrl}>Edit on GitHub</Link>
-        </p>
+        </p>*/}
       </div>
     </article>
   );
 }
 
 export async function generateStaticParams() {
-  const entries = await readdir("./public/", { withFileTypes: true });
+  const entries = await readdir("./public/", {withFileTypes: true});
   const dirs = entries
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => entry.name);
-  return dirs.map((dir) => ({ slug: dir }));
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => entry.name);
+  return dirs.map((dir) => ({slug: dir}));
 }
 
 export async function generateMetadata({ params }) {
