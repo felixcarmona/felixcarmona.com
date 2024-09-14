@@ -56,7 +56,7 @@ export default async function Home() {
 }
 
 function PostTitle({ post }) {
-  let lightStart = new Color("lab(63 59.32 -1.47)");
+  let lightStart = new Color("#FF0080");
   let lightEnd = new Color("lab(33 42.09 -43.19)");
   let lightRange = lightStart.range(lightEnd);
   let darkStart = new Color("lab(81 32.36 -7.02)");
