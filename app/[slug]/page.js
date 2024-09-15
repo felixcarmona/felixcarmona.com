@@ -26,12 +26,7 @@ export default async function PostPage({ params }) {
     }
   }
   const { content, data } = matter(file);
-  const discussUrl = `https://x.com/search?q=${encodeURIComponent(
-    `https://felixcarmona.com/${params.slug}/`,
-  )}`;
-  const editUrl = `https://github.com/felixcarmona/felixcarmona.github.io/edit/main/public/${encodeURIComponent(
-    params.slug,
-  )}/index.md`;
+  const shareOnX = `https://x.com/intent/tweet?text=${encodeURIComponent(data.title)}&url=${encodeURIComponent(`https://felixcarmona.com/${params.slug}/`)}`;
   return (
     <article>
       <h1
@@ -75,12 +70,10 @@ export default async function PostPage({ params }) {
           }}
         />
         <hr />
+        <p>
+          <Link href={shareOnX}>Share on 𝕏</Link>
+        </p>
         <Comments/>
-        {/*<p>
-          <Link href={discussUrl}>Discuss on 𝕏</Link>
-          &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-          <Link href={editUrl}>Edit on GitHub</Link>
-        </p>*/}
       </div>
     </article>
   );
