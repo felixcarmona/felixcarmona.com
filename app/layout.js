@@ -3,7 +3,8 @@ import HomeLink from "./HomeLink";
 import AutoRefresh from "./AutoRefresh";
 import { serif } from "./fonts";
 import "./global.css";
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
+
 import MailchimpForm from "./MailChimpForm";
 
 export default function RootLayout({ children }) {
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
       <MailchimpForm/>
       </body>
       <GoogleTagManager gtmId="GTM-N35D94NT" />
+      <GoogleAnalytics gaId="G-PX6Q4ZJ66L" />
       </html>
     </AutoRefresh>
   );
