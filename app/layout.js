@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
       </div>
       <MailchimpForm/>
       </body>
-      <GoogleTagManager gtmId="G-PX6Q4ZJ66L" />
+      <GoogleTagManager gtmId="GTM-N35D94NT" />
       </html>
     </AutoRefresh>
   );
