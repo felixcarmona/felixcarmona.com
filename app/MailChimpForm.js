@@ -41,7 +41,7 @@ const MailchimpForm = () => {
                         <div className="response" id="mce-success-response" style={{ display: 'none' }}></div>
                     </div>
                     <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
-                        <input type="text" name="b_a532b6dc5217eb06b673499cf_7b04358b59" tabIndex="-1" value="" />
+                        <input type="text" name="b_a532b6dc5217eb06b673499cf_7b04358b59" tabIndex="-1" defaultValue="" />
                     </div>
                     <div className="optionalParent">
                         <div className="clear foot">

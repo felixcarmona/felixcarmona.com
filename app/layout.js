@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
           <div className="relative space-x-2 flex top-[4px] italic">
               <Link href="https://x.com/felixcarmona46" target="_blank">
                   <div className="flex items-center h-full justify-center">
-                      <svg style={{'padding-top': '2px'}} xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                      <svg style={{'paddingTop': '2px'}} xmlns="http://www.w3.org/2000/svg" width="28" height="28"
                            fill="currentColor"
                            className="bi bi-twitter-x" viewBox="0 0 16 16">
                           <path
